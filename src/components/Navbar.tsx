@@ -1,18 +1,21 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/LanguageContext"; // adjust import if needed
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageToggle from "@/components/LanguageToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const { t } = useLanguage();
 
-  const isHome = location.pathname === "/";
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -29,7 +32,6 @@ const Navbar = () => {
     { name: t("nav.contact"), href: "/contact" },
   ];
 
-  // Only apply dark (white text) when on home and not scrolled
   const isDark = isHome && !isScrolled;
 
   return (
@@ -43,11 +45,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 group">
             <img
               src="/logo-morizono.png"
               alt="Morizono Logo"
-              className="w-full h-full object-cover"
+              className="h-full w-auto object-cover"
             />
           </Link>
 
@@ -56,14 +58,13 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className={`relative font-medium transition-all duration-200 ${
                   isDark ? "text-white" : "text-foreground"
-                }
-                  hover:text-accent after:absolute after:bottom-0 after:left-0 after:h-[2px]
+                } hover:text-accent after:absolute after:bottom-0 after:left-0 after:h-[2px]
                   after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full
                   ${
-                    location.pathname === link.href
+                    pathname === link.href
                       ? "text-accent after:w-full"
                       : ""
                   }`}
@@ -96,10 +97,10 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block py-2 text-foreground/80 hover:text-accent transition-colors duration-200 ${
-                  location.pathname === link.href ? "text-accent" : ""
+                  pathname === link.href ? "text-accent" : ""
                 }`}
               >
                 {link.name}
@@ -110,7 +111,7 @@ const Navbar = () => {
               <LanguageToggle isDark={false} />
             </div>
 
-            <Link to="/contact" className="block">
+            <Link href="/contact" className="block">
               <Button
                 variant="default"
                 size="lg"

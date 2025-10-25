@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+"use client";
 
-type Language = 'id' | 'en';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+
+type Language = "id" | "en";
 
 interface LanguageContextType {
   language: Language;
@@ -278,11 +280,20 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('id');
+  const [language, setLanguage] = useState<Language>("id");
 
-  const t = (key: string): string => {
-    return translations[language][key] || key;
-  };
+  // Load language from localStorage on mount
+  useEffect(() => {
+    const storedLang = localStorage.getItem("language") as Language | null;
+    if (storedLang) setLanguage(storedLang);
+  }, []);
+
+  // Persist language changes
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
+  const t = (key: string): string => (translations[language] as Record<string, string>)[key] || key;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
@@ -293,8 +304,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
-  }
+  if (!context) throw new Error("useLanguage must be used within LanguageProvider");
   return context;
 };

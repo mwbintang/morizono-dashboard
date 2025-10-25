@@ -1,8 +1,11 @@
-import { Helmet } from "react-helmet";
-import { useState } from "react";
+"use client";
+
+// import Head from "next/head";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
 import { Bed, Bath, Maximize, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +22,7 @@ const products = [
     landSize: 120,
     buildingSize: 90,
     image: "/placeholder.svg",
-    type: "ready"
+    type: "ready",
   },
   {
     id: 2,
@@ -31,7 +34,7 @@ const products = [
     landSize: 200,
     buildingSize: 180,
     image: "/placeholder.svg",
-    type: "ready"
+    type: "ready",
   },
   {
     id: 3,
@@ -43,7 +46,7 @@ const products = [
     landSize: 100,
     buildingSize: 85,
     image: "/placeholder.svg",
-    type: "indent"
+    type: "indent",
   },
   {
     id: 4,
@@ -55,7 +58,7 @@ const products = [
     landSize: 150,
     buildingSize: 140,
     image: "/placeholder.svg",
-    type: "ready"
+    type: "ready",
   },
   {
     id: 5,
@@ -67,7 +70,7 @@ const products = [
     landSize: 110,
     buildingSize: 80,
     image: "/placeholder.svg",
-    type: "indent"
+    type: "indent",
   },
   {
     id: 6,
@@ -79,36 +82,55 @@ const products = [
     landSize: 250,
     buildingSize: 220,
     image: "/placeholder.svg",
-    type: "ready"
-  }
+    type: "ready",
+  },
 ];
 
 const Products = () => {
   const [filter, setFilter] = useState("all");
   const { t } = useLanguage();
+  const router = useRouter();
 
-  const filteredProducts = filter === "all" 
-    ? products 
-    : products.filter(p => p.type === filter);
+  useEffect(() => {
+      // Change the document title
+      document.title = `${t("products.title")} - Morizono - Gardens`;
+  
+      // Update the meta description dynamically
+      // const metaDesc = document.querySelector('meta[name="description"]');
+      // if (metaDesc) {
+      //   metaDesc.setAttribute("content", t("about.subtitle"));
+      // } else {
+      //   // If not exists, create it
+      //   const meta = document.createElement("meta");
+      //   meta.name = "description";
+      //   meta.content = t("about.subtitle");
+      //   document.head.appendChild(meta);
+      // }
+    }, [t]);
+
+  const filteredProducts =
+    filter === "all" ? products : products.filter((p) => p.type === filter);
 
   return (
     <>
-      <Helmet>
-        <title>{t('products.title')} - PremiumHomes</title>
-        <meta name="description" content={t('products.subtitle')} />
-      </Helmet>
-      
+      {/* <Head>
+        <title>{t("products.title")} - PremiumHomes</title>
+        <meta name="description" content={t("products.subtitle")} />
+      </Head> */}
+
       <div className="min-h-screen">
         <Navbar />
-        
+
         <main className="pt-24 pb-16">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('products.title')}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                  {t("products.title")}
+                </h1>
                 <p className="text-lg text-muted-foreground">
-                  {t('products.subtitle')}
+                  {t("products.subtitle")}
                 </p>
               </div>
             </div>
@@ -118,23 +140,23 @@ const Products = () => {
           <section className="py-8 border-b">
             <div className="container mx-auto px-4">
               <div className="flex justify-center gap-4 flex-wrap">
-                <Button 
+                <Button
                   variant={filter === "all" ? "default" : "outline"}
                   onClick={() => setFilter("all")}
                 >
-                  {t('products.all')}
+                  {t("products.all")}
                 </Button>
-                <Button 
+                <Button
                   variant={filter === "ready" ? "default" : "outline"}
                   onClick={() => setFilter("ready")}
                 >
-                  {t('products.house')}
+                  {t("products.house")}
                 </Button>
-                <Button 
+                <Button
                   variant={filter === "indent" ? "default" : "outline"}
                   onClick={() => setFilter("indent")}
                 >
-                  {t('products.commercial')}
+                  {t("products.commercial")}
                 </Button>
               </div>
             </div>
@@ -145,35 +167,38 @@ const Products = () => {
             <div className="container mx-auto px-4">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProducts.map((product, index) => (
-                  <Card 
+                  <Card
                     key={product.id}
                     className="overflow-hidden hover:shadow-medium transition-all animate-scale-in group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="relative h-64 overflow-hidden">
-                      <img 
+                      <Image
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute top-4 right-4">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                          product.type === "ready" 
-                            ? "bg-accent text-white" 
-                            : "bg-secondary text-primary"
-                        }`}>
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                            product.type === "ready"
+                              ? "bg-accent text-white"
+                              : "bg-secondary text-primary"
+                          }`}
+                        >
                           {product.type === "ready" ? "Siap Huni" : "Indent"}
                         </span>
                       </div>
                     </div>
-                    
+
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold mb-2">{product.name}</h3>
                       <div className="flex items-center text-muted-foreground mb-4">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span className="text-sm">{product.location}</span>
                       </div>
-                      
+
                       <div className="grid grid-cols-3 gap-4 mb-4 py-4 border-y">
                         <div className="flex items-center gap-2">
                           <Bed className="w-4 h-4 text-accent" />
@@ -188,12 +213,17 @@ const Products = () => {
                           <span className="text-sm">{product.landSize}m²</span>
                         </div>
                       </div>
-                      
-                      <p className="text-2xl font-bold text-accent mb-4">{product.price}</p>
-                      
-                      <Link to={`/products/${product.id}`}>
-                        <Button className="w-full">{t('products.viewDetails')}</Button>
-                      </Link>
+
+                      <p className="text-2xl font-bold text-accent mb-4">
+                        {product.price}
+                      </p>
+
+                      <Button
+                        className="w-full"
+                        onClick={() => router.push(`/products/${product.id}`)}
+                      >
+                        {t("products.viewDetails")}
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
