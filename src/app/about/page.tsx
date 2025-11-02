@@ -7,6 +7,7 @@ import { Award, Target, Users, MapPin, CircleDollarSign } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
 import Image from "next/image";
+import { ContentHead } from "@/components/ContentHead";
 
 const About = () => {
   const { t } = useLanguage();
@@ -34,15 +35,10 @@ const About = () => {
         <Navbar />
 
         <main className="pt-24 pb-16">
-          {/* Hero Section */}
-          <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
-                <p className="text-4xl md:text-5xl font-bold">{t("about.subtitle")}</p>
-              </div>
-            </div>
-          </section>
+          <ContentHead
+            title={t("about.title")}
+            subtitle={t("about.subtitle")}
+          />
 
           {/* Story Section */}
           <section className="py-16">

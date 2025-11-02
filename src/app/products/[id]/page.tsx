@@ -65,14 +65,6 @@ const ProductDetail = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>{product.name} - Detail Properti</title>
-        <meta
-          name="description"
-          content={`${product.name} - ${product.price}. ${product.description}`}
-        />
-      </Head> */}
-
       <div className="min-h-screen">
         <Navbar />
 

@@ -14,8 +14,8 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
     <ThemeProvider attribute="class" defaultTheme="light">
       <LanguageProvider>
         {children}
+        <WhatsAppButton />
       </LanguageProvider>
-      <WhatsAppButton />
     </ThemeProvider>
   );
 }

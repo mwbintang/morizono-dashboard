@@ -132,10 +132,10 @@ Dikembangkan oleh PT Graha Perdana Indah (GPI) dan Sumitomo Forestry — pengemb
     'contact.address': 'Alamat',
     'contact.addressDetail': 'Jl. Cinangka Raya, Curug, Kec. Bojongsari, Kota Depok, Jawa Barat 16517',
     'contact.hours': 'Jam Operasional',
-    'contact.hoursDetail': 'Senin - Jumat: 08:00 - 17:00',
+    'contact.hoursDetail': 'Senin - Minggu: 08:00 - 17:00',
     'contact.sendMessage': 'Kirim Pesan',
     'contact.name': 'Nama',
-    'contact.emailPlaceholder': 'email@contoh.com',
+    'contact.emailPlaceholder': 'halomorizono@gmail.com',
     'contact.subject': 'Subjek',
     'contact.message': 'Pesan',
     'contact.send': 'Kirim Pesan',
@@ -145,6 +145,11 @@ Dikembangkan oleh PT Graha Perdana Indah (GPI) dan Sumitomo Forestry — pengemb
     'notfound.title': 'Halaman Tidak Ditemukan',
     'notfound.desc': 'Maaf, halaman yang Anda cari tidak dapat ditemukan.',
     'notfound.back': 'Kembali ke Beranda',
+
+    // WhatsApp
+    'whatsapp.aria': 'Hubungi kami di WhatsApp',
+    'whatsapp.tooltip': 'Chat dengan kami di WhatsApp',
+    'whatsapp.message': 'Halo, saya tertarik dengan properti yang Anda tawarkan.',
   },
   en: {
     // Navbar
@@ -266,10 +271,10 @@ Dikembangkan oleh PT Graha Perdana Indah (GPI) dan Sumitomo Forestry — pengemb
     'contact.address': 'Address',
     'contact.addressDetail': 'Jl. Cinangka Raya, Curug, Kec. Bojongsari, Kota Depok, Jawa Barat 16517',
     'contact.hours': 'Business Hours',
-    'contact.hoursDetail': 'Monday - Friday: 08:00 - 17:00',
+    'contact.hoursDetail': 'Monday - Sunday: 08:00 - 17:00',
     'contact.sendMessage': 'Send Message',
     'contact.name': 'Name',
-    'contact.emailPlaceholder': 'email@example.com',
+    'contact.emailPlaceholder': 'halomorizono@gmail.com',
     'contact.subject': 'Subject',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
@@ -279,6 +284,11 @@ Dikembangkan oleh PT Graha Perdana Indah (GPI) dan Sumitomo Forestry — pengemb
     'notfound.title': 'Page Not Found',
     'notfound.desc': 'Sorry, the page you are looking for could not be found.',
     'notfound.back': 'Back to Home',
+
+    // WhatsApp
+    'whatsapp.aria': 'Contact us on WhatsApp',
+    'whatsapp.tooltip': 'Chat with us on WhatsApp',
+    'whatsapp.message': "Hello, I'm interested in the property you are offering.",
   },
 };
 

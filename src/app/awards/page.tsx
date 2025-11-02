@@ -7,6 +7,7 @@ import { Award, Star, Trophy } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
+import { ContentHead } from "@/components/ContentHead";
 
 const awards = [
   {
@@ -96,19 +97,10 @@ const Awards = () => {
 
         <main className="pt-24 pb-16">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-                <Trophy className="w-16 h-16 mx-auto mb-6 text-accent" />
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  {t("awards.title")}
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  {t("awards.subtitle")}
-                </p>
-              </div>
-            </div>
-          </section>
+          <ContentHead
+            title={t("awards.title")}
+            subtitle={t("awards.subtitle")}
+          />
 
           {/* Awards Section */}
           <section className="py-16">

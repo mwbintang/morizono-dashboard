@@ -16,6 +16,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
+import { ContentHead } from "@/components/ContentHead";
 
 const facilities = [
   {
@@ -94,18 +95,10 @@ const Facilities = () => {
 
         <main className="flex-grow pt-24 pb-16">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  {t("facilities.title")}
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  {t("facilities.subtitle")}
-                </p>
-              </div>
-            </div>
-          </section>
+          <ContentHead
+            title={t("facilities.title")}
+            subtitle={t("facilities.subtitle")}
+          />
 
           {/* Main Facilities */}
           <section className="py-16">

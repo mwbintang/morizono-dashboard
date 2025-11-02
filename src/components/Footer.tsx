@@ -1,7 +1,7 @@
 "use client";
 
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok, FaYoutube } from "react-icons/fa6";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -80,6 +80,7 @@ const Footer = () => {
                 { href: "https://facebook.com", icon: <Facebook size={20} /> },
                 { href: "https://www.instagram.com/gardens.ula/", icon: <Instagram size={20} /> },
                 { href: "https://www.tiktok.com", icon: <FaTiktok size={20} /> },
+                { href: "https://www.youtube.com/@Morizono-Gardens", icon: <FaYoutube size={20} /> },
               ].map((social) => (
                 <a
                   key={social.href}

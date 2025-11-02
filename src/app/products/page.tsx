@@ -10,6 +10,7 @@ import { Bed, Bath, Maximize, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ContentHead } from "@/components/ContentHead";
 
 const products = [
   {
@@ -92,21 +93,21 @@ const Products = () => {
   const router = useRouter();
 
   useEffect(() => {
-      // Change the document title
-      document.title = `${t("products.title")} - Morizono - Gardens`;
-  
-      // Update the meta description dynamically
-      // const metaDesc = document.querySelector('meta[name="description"]');
-      // if (metaDesc) {
-      //   metaDesc.setAttribute("content", t("about.subtitle"));
-      // } else {
-      //   // If not exists, create it
-      //   const meta = document.createElement("meta");
-      //   meta.name = "description";
-      //   meta.content = t("about.subtitle");
-      //   document.head.appendChild(meta);
-      // }
-    }, [t]);
+    // Change the document title
+    document.title = `${t("products.title")} - Morizono - Gardens`;
+
+    // Update the meta description dynamically
+    // const metaDesc = document.querySelector('meta[name="description"]');
+    // if (metaDesc) {
+    //   metaDesc.setAttribute("content", t("about.subtitle"));
+    // } else {
+    //   // If not exists, create it
+    //   const meta = document.createElement("meta");
+    //   meta.name = "description";
+    //   meta.content = t("about.subtitle");
+    //   document.head.appendChild(meta);
+    // }
+  }, [t]);
 
   const filteredProducts =
     filter === "all" ? products : products.filter((p) => p.type === filter);
@@ -118,18 +119,10 @@ const Products = () => {
 
         <main className="pt-24 pb-16">
           {/* Hero Section */}
-          <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  {t("products.title")}
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  {t("products.subtitle")}
-                </p>
-              </div>
-            </div>
-          </section>
+          <ContentHead
+            title={t("products.title")}
+            subtitle={t("products.subtitle")}
+          />
 
           {/* Filter Section */}
           <section className="py-8 border-b">
@@ -176,11 +169,10 @@ const Products = () => {
                       />
                       <div className="absolute top-4 right-4">
                         <span
-                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                            product.type === "ready"
+                          className={`px-3 py-1 rounded-full text-sm font-semibold ${product.type === "ready"
                               ? "bg-accent text-white"
                               : "bg-secondary text-primary"
-                          }`}
+                            }`}
                         >
                           {product.type === "ready" ? "Siap Huni" : "Indent"}
                         </span>
