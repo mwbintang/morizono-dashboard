@@ -19,7 +19,7 @@ const translations = {
     'nav.facilities': 'Fasilitas',
     'nav.awards': 'Penghargaan',
     'nav.contact': 'Kontak',
-    
+
     // Hero
     'hero.title1': 'Temukan Rumah Impian Anda',
     'hero.desc1': 'Properti premium dengan lokasi strategis dan desain modern',
@@ -28,45 +28,48 @@ const translations = {
     'hero.title3': 'Hunian Berkualitas Tinggi',
     'hero.desc3': 'Kualitas konstruksi terbaik dengan sertifikat lengkap',
     'hero.cta': 'Lihat Properti',
-    
+
     // Intro
     'intro.title': 'Solusi Properti Terpercaya Anda',
-    'intro.desc': 'Kami adalah perusahaan properti terkemuka yang berdedikasi untuk membantu Anda menemukan rumah sempurna. Dengan pengalaman lebih dari 10 tahun di industri real estate, kami menawarkan berbagai pilihan properti berkualitas tinggi dengan lokasi strategis dan harga kompetitif.',
+    'intro.desc': `Hadir sebagai bagian dari kawasan Gardens at Candi Sawangan, Morizono menawarkan hunian yang memadukan ketenangan alam dan kemudahan akses kota.
+Dikembangkan oleh PT Graha Perdana Indah (GPI) dan Sumitomo Forestry — pengembang terpercaya dengan pengalaman lebih dari dua dekade — kawasan ini dirancang untuk memberikan kenyamanan, keamanan, dan gaya hidup modern bagi keluarga masa kini.`,
     'intro.mission': 'Misi Kami',
     'intro.missionDesc': 'Menyediakan properti berkualitas tinggi dengan pelayanan terbaik dan harga yang kompetitif.',
     'intro.vision': 'Visi Kami',
     'intro.visionDesc': 'Menjadi perusahaan properti terpercaya dan pilihan utama untuk investasi properti Anda.',
     'intro.values': 'Nilai Kami',
     'intro.valuesDesc': 'Integritas, profesionalisme, dan kepuasan pelanggan adalah prioritas utama kami.',
-    
+
     // Stats
     'stats.properties': 'Properti Terjual',
     'stats.experience': 'Tahun Pengalaman',
     'stats.clients': 'Klien Puas',
     'stats.team': 'Tim Profesional',
-    
+
     // Footer
     'footer.about': 'Tentang Kami',
     'footer.aboutDesc': 'Perusahaan properti terpercaya dengan pengalaman lebih dari 10 tahun.',
     'footer.quickLinks': 'Link Cepat',
     'footer.contactUs': 'Hubungi Kami',
     'footer.rights': 'Hak Cipta Dilindungi',
-    
+
     // About Page
-    'about.title': 'Tentang Kami',
-    'about.subtitle': 'Solusi Properti Terpercaya Anda',
+    'about.title': 'Selamat datang di Morizono',
+    'about.subtitle': 'The Art of Japanese Living',
     'about.story': 'Cerita Kami',
-    'about.storyDesc': 'Didirikan lebih dari 10 tahun yang lalu, kami telah membantu ribuan keluarga menemukan rumah impian mereka. Dengan tim profesional yang berpengalaman dan komitmen terhadap kepuasan pelanggan, kami terus berkembang menjadi salah satu perusahaan properti terkemuka di wilayah ini.',
+    'about.storyDesc': 'Temukan harmoni, keindahan, dan kesederhanaan dalam setiap aspek kehidupan. Morizono mengajak Anda menyelami filosofi hidup Jepang yang autentik melalui desain, budaya, dan pengalaman yang menyatu dengan alam dan ketenangan batin.',
     'about.whyChoose': 'Mengapa Memilih Kami?',
-    'about.expertise': 'Keahlian',
-    'about.expertiseDesc': 'Tim profesional dengan pengalaman lebih dari 10 tahun di industri properti.',
-    'about.quality': 'Kualitas',
-    'about.qualityDesc': 'Properti berkualitas tinggi dengan sertifikat lengkap dan legal.',
-    'about.service': 'Pelayanan',
-    'about.serviceDesc': 'Pelayanan terbaik dari konsultasi hingga serah terima kunci.',
-    'about.investment': 'Investasi',
-    'about.investmentDesc': 'Nilai investasi terbaik dengan lokasi strategis dan potensi berkembang.',
-    
+    'about.expertise': 'Reputasi Global & Kualitas Jepang',
+    'about.expertiseDesc': `Dikembangkan oleh Sumitomo Forestry—perusahaan Jepang dengan pengalaman lebih dari 300 tahun—bekerja sama dengan Graha Perdana Indah. Proyek ini mengedepankan standar tinggi dalam desain, material, dan konstruksi.`,
+    'about.quality': 'Desain Hunian Bergaya Jepang yang Eksklusif',
+    'about.qualityDesc': 'Morizono mengusung filosofi hidup ala Jepang yang menyatu dengan alam. Setiap unit dirancang dengan elemen khas seperti taman belakang, teras engawa, dan ruang multifungsi bergaya tatami—menciptakan suasana yang tenang dan harmonis.',
+    'about.location': 'Lokasi Strategis & Berkembang Pesat',
+    'about.locationDesc': 'Berada di kawasan Gardens at Candi Sawangan, hanya 10 menit dari Tol Pamulang, dan memiliki akses mudah ke Jakarta, Depok, dan BSD. Lokasinya menawarkan keseimbangan antara ketenangan hunian dan konektivitas urban.',
+    'about.service': 'Teknologi Modern & Ramah Lingkungan',
+    'about.serviceDesc': 'Setiap rumah dilengkapi sistem smart home, panel surya, dan fitur keamanan pintar. Morizono juga meraih sertifikasi EDGE Advanced berkat efisiensi energi dan air—pilihan ideal untuk gaya hidup berkelanjutan.',
+    'about.investment': 'Investasi Masa Depan yang Menjanjikan',
+    'about.investmentDesc': 'Dengan total 346 unit (305 rumah & 41 ruko), kawasan ini dirancang untuk tumbuh bersama perkembangan kota. Potensi nilai properti yang terus meningkat menjadikan Morizono bukan hanya tempat tinggal, tapi juga aset investasi.',
+
     // Products Page
     'products.title': 'Properti Kami',
     'products.subtitle': 'Pilihan Properti Berkualitas Tinggi',
@@ -79,7 +82,7 @@ const translations = {
     'products.landSize': 'Luas Tanah',
     'products.buildingSize': 'Luas Bangunan',
     'products.viewDetails': 'Lihat Detail',
-    
+
     // Product Detail
     'detail.overview': 'Gambaran Umum',
     'detail.features': 'Fitur',
@@ -87,7 +90,7 @@ const translations = {
     'detail.contact': 'Hubungi Kami',
     'detail.interested': 'Tertarik dengan properti ini?',
     'detail.whatsapp': 'Hubungi via WhatsApp',
-    
+
     // Facilities Page
     'facilities.title': 'Fasilitas',
     'facilities.subtitle': 'Nikmati Fasilitas Lengkap di Area Properti Kami',
@@ -103,7 +106,7 @@ const translations = {
     'facilities.playgroundDesc': 'Area bermain yang aman dan menyenangkan untuk anak-anak.',
     'facilities.parking': 'Area Parkir Luas',
     'facilities.parkingDesc': 'Parkir luas dan aman untuk kendaraan penghuni dan tamu.',
-    
+
     // Awards Page
     'awards.title': 'Penghargaan & Testimoni',
     'awards.subtitle': 'Kepercayaan dan Penghargaan yang Kami Terima',
@@ -118,7 +121,7 @@ const translations = {
     'awards.client1': 'Pelayanan sangat memuaskan! Tim profesional dan membantu kami menemukan rumah impian dengan mudah.',
     'awards.client2': 'Proses pembelian sangat mudah dan transparan. Sangat merekomendasikan!',
     'awards.client3': 'Properti berkualitas tinggi dengan harga yang sangat kompetitif. Investasi terbaik!',
-    
+
     // Contact Page
     'contact.title': 'Hubungi Kami',
     'contact.subtitle': 'Kami Siap Membantu Anda',
@@ -127,7 +130,7 @@ const translations = {
     'contact.phone': 'Telepon',
     'contact.email': 'Email',
     'contact.address': 'Alamat',
-    'contact.addressDetail': 'Jl. Properti Indah No. 123, Jakarta Selatan',
+    'contact.addressDetail': 'Jl. Cinangka Raya, Curug, Kec. Bojongsari, Kota Depok, Jawa Barat 16517',
     'contact.hours': 'Jam Operasional',
     'contact.hoursDetail': 'Senin - Jumat: 08:00 - 17:00',
     'contact.sendMessage': 'Kirim Pesan',
@@ -137,7 +140,7 @@ const translations = {
     'contact.message': 'Pesan',
     'contact.send': 'Kirim Pesan',
     'contact.visitUs': 'Kunjungi Kantor Kami',
-    
+
     // Not Found
     'notfound.title': 'Halaman Tidak Ditemukan',
     'notfound.desc': 'Maaf, halaman yang Anda cari tidak dapat ditemukan.',
@@ -151,7 +154,7 @@ const translations = {
     'nav.facilities': 'Facilities',
     'nav.awards': 'Awards',
     'nav.contact': 'Contact',
-    
+
     // Hero
     'hero.title1': 'Find Your Dream Home',
     'hero.desc1': 'Premium properties with strategic locations and modern design',
@@ -160,7 +163,7 @@ const translations = {
     'hero.title3': 'High Quality Residences',
     'hero.desc3': 'Top construction quality with complete certificates',
     'hero.cta': 'View Properties',
-    
+
     // Intro
     'intro.title': 'Your Trusted Property Solution',
     'intro.desc': 'We are a leading property company dedicated to helping you find the perfect home. With over 10 years of experience in the real estate industry, we offer a variety of high-quality property options with strategic locations and competitive prices.',
@@ -170,35 +173,37 @@ const translations = {
     'intro.visionDesc': 'To become a trusted property company and the top choice for your property investments.',
     'intro.values': 'Our Values',
     'intro.valuesDesc': 'Integrity, professionalism, and customer satisfaction are our top priorities.',
-    
+
     // Stats
     'stats.properties': 'Properties Sold',
     'stats.experience': 'Years Experience',
     'stats.clients': 'Happy Clients',
     'stats.team': 'Professional Team',
-    
+
     // Footer
     'footer.about': 'About Us',
     'footer.aboutDesc': 'Trusted property company with over 10 years of experience.',
     'footer.quickLinks': 'Quick Links',
     'footer.contactUs': 'Contact Us',
     'footer.rights': 'All Rights Reserved',
-    
+
     // About Page
-    'about.title': 'About Us',
-    'about.subtitle': 'Your Trusted Property Solution',
+    'about.title': 'Welcome to Morizono',
+    'about.subtitle': 'The Art of Japanese Living',
     'about.story': 'Our Story',
-    'about.storyDesc': 'Founded over 10 years ago, we have helped thousands of families find their dream homes. With a professional and experienced team and commitment to customer satisfaction, we continue to grow as one of the leading property companies in the region.',
-    'about.whyChoose': 'Why Choose Us?',
-    'about.expertise': 'Expertise',
-    'about.expertiseDesc': 'Professional team with over 10 years of experience in the property industry.',
-    'about.quality': 'Quality',
-    'about.qualityDesc': 'High-quality properties with complete and legal certificates.',
-    'about.service': 'Service',
-    'about.serviceDesc': 'Best service from consultation to key handover.',
-    'about.investment': 'Investment',
-    'about.investmentDesc': 'Best investment value with strategic location and growth potential.',
-    
+    'about.storyDesc': `Discover harmony, beauty, and simplicity in every aspect of life. Morizono invites you to explore the authentic philosophy of Japanese living through design, culture, and experiences that connect you with nature and inner peace.`,
+    'about.whyChoose': 'Why Choose MORIZONO?',
+    'about.expertise': 'Japanese Craftsmanship & Global Reputation',
+    'about.expertiseDesc': `Developed by Japan’s prestigious Sumitomo Forestry in collaboration with Graha Perdana Indah, Morizono reflects centuries of expertise, attention to detail, and uncompromising quality.`,
+    'about.quality': 'Exclusive Japanese-Inspired Design',
+    'about.qualityDesc': 'Each home is thoughtfully designed with authentic Japanese elements — such as private gardens, engawa terraces, and flexible tatami-style rooms — offering a serene and refined living experience.',
+    'about.location': 'Prime Location with Seamless Connectivity',
+    'about.locationDesc': 'Situated within Gardens at Candi Sawangan, just 10 minutes from Pamulang Toll Access, Morizono offers effortless access to Jakarta, Depok, and major city centers — while maintaining the calm of a suburban retreat.',
+    'about.service': 'Smart, Sustainable Living',
+    'about.serviceDesc': 'Homes come equipped with smart home technology, solar panels, and modern security features. Certified EDGE Advanced, Morizono promotes eco-friendly living through energy and water efficiency.',
+    'about.investment': 'Long-Term Value & Investment Potential',
+    'about.investmentDesc': 'With only 346 exclusive units, Morizono combines lifestyle with opportunity. Its premium concept, strategic location, and limited supply make it a smart choice for both homeowners and investors.',
+
     // Products Page
     'products.title': 'Our Properties',
     'products.subtitle': 'High Quality Property Selection',
@@ -211,7 +216,7 @@ const translations = {
     'products.landSize': 'Land Size',
     'products.buildingSize': 'Building Size',
     'products.viewDetails': 'View Details',
-    
+
     // Product Detail
     'detail.overview': 'Overview',
     'detail.features': 'Features',
@@ -219,7 +224,7 @@ const translations = {
     'detail.contact': 'Contact Us',
     'detail.interested': 'Interested in this property?',
     'detail.whatsapp': 'Contact via WhatsApp',
-    
+
     // Facilities Page
     'facilities.title': 'Facilities',
     'facilities.subtitle': 'Enjoy Complete Facilities in Our Property Areas',
@@ -235,7 +240,7 @@ const translations = {
     'facilities.playgroundDesc': 'Safe and fun play area for children.',
     'facilities.parking': 'Spacious Parking Area',
     'facilities.parkingDesc': 'Large and secure parking for residents and guests vehicles.',
-    
+
     // Awards Page
     'awards.title': 'Awards & Testimonials',
     'awards.subtitle': 'Trust and Recognition We Receive',
@@ -250,7 +255,7 @@ const translations = {
     'awards.client1': 'Very satisfying service! Professional team helped us find our dream home easily.',
     'awards.client2': 'Very easy and transparent purchasing process. Highly recommended!',
     'awards.client3': 'High quality property with very competitive prices. Best investment!',
-    
+
     // Contact Page
     'contact.title': 'Contact Us',
     'contact.subtitle': 'We Are Ready to Help You',
@@ -259,7 +264,7 @@ const translations = {
     'contact.phone': 'Phone',
     'contact.email': 'Email',
     'contact.address': 'Address',
-    'contact.addressDetail': 'Jl. Properti Indah No. 123, South Jakarta',
+    'contact.addressDetail': 'Jl. Cinangka Raya, Curug, Kec. Bojongsari, Kota Depok, Jawa Barat 16517',
     'contact.hours': 'Business Hours',
     'contact.hoursDetail': 'Monday - Friday: 08:00 - 17:00',
     'contact.sendMessage': 'Send Message',
@@ -269,7 +274,7 @@ const translations = {
     'contact.message': 'Message',
     'contact.send': 'Send Message',
     'contact.visitUs': 'Visit Our Office',
-    
+
     // Not Found
     'notfound.title': 'Page Not Found',
     'notfound.desc': 'Sorry, the page you are looking for could not be found.',

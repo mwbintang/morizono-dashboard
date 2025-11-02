@@ -91,11 +91,6 @@ const Awards = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>{t("awards.title")} - PremiumHomes</title>
-        <meta name="description" content={t("awards.subtitle")} />
-      </Head> */}
-
       <div className="min-h-screen">
         <Navbar />
 

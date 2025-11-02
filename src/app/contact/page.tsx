@@ -32,11 +32,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>{t("contact.title")} - PremiumHomes</title>
-        <meta name="description" content={t("contact.subtitle")} />
-      </Head> */}
-
       <div className="min-h-screen">
         <Navbar />
 

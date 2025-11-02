@@ -3,9 +3,10 @@
 // import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Award, Target, Users, MapPin } from "lucide-react";
+import { Award, Target, Users, MapPin, CircleDollarSign } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const About = () => {
   const { t } = useLanguage();
@@ -29,11 +30,6 @@ const About = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>{t("about.title")} - PremiumHomes</title>
-        <meta name="description" content={t("about.subtitle")} />
-      </Head> */}
-
       <div className="min-h-screen">
         <Navbar />
 
@@ -43,7 +39,7 @@ const About = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
-                <p className="text-lg text-muted-foreground">{t("about.subtitle")}</p>
+                <p className="text-4xl md:text-5xl font-bold">{t("about.subtitle")}</p>
               </div>
             </div>
           </section>
@@ -53,13 +49,15 @@ const About = () => {
             <div className="container mx-auto px-4">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="animate-fade-in-up">
-                  <h2 className="text-3xl font-bold mb-6">{t("about.story")}</h2>
-                  <p className="text-muted-foreground mb-4">{t("about.storyDesc")}</p>
+                  {/* <h2 className="text-3xl font-bold mb-6">{t("about.story")}</h2> */}
+                  <p className="text-lg font-semibold text-muted-foreground mb-4">{t("about.storyDesc")}</p>
                 </div>
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-medium animate-fade-in">
-                  <img
-                    src="/placeholder.svg"
+                  <Image
+                    src="/slider/brosure-1.jpg"
                     alt={t("about.story")}
+                    width={800}
+                    height={600}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -71,7 +69,7 @@ const About = () => {
           <section className="py-16 bg-secondary/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">{t("about.whyChoose")}</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
                 {[
                   {
                     icon: Award,
@@ -84,15 +82,20 @@ const About = () => {
                     description: t("about.qualityDesc"),
                   },
                   {
+                    icon: MapPin,
+                    title: t("about.location"),
+                    description: t("about.locationDesc"),
+                  },
+                  {
                     icon: Users,
                     title: t("about.service"),
                     description: t("about.serviceDesc"),
                   },
                   {
-                    icon: MapPin,
+                    icon: CircleDollarSign,
                     title: t("about.investment"),
                     description: t("about.investmentDesc"),
-                  },
+                  }
                 ].map((value, index) => (
                   <div
                     key={index}

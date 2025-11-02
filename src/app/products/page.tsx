@@ -113,11 +113,6 @@ const Products = () => {
 
   return (
     <>
-      {/* <Head>
-        <title>{t("products.title")} - PremiumHomes</title>
-        <meta name="description" content={t("products.subtitle")} />
-      </Head> */}
-
       <div className="min-h-screen">
         <Navbar />
 

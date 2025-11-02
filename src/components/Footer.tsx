@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa6";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-accent">PremiumHomes</h3>
+            <h3 className="text-2xl font-bold mb-4 text-accent">Morizono - Gardens</h3>
             <p className="text-primary-foreground/80 mb-4">
               {t("footer.aboutDesc") || "About our company"}
             </p>
@@ -50,17 +51,16 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="text-accent mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-primary-foreground/80">+62 812-3456-7890</p>
-                  <p className="text-primary-foreground/80">+62 821-9876-5432</p>
+                  <p className="text-primary-foreground/80">+62 857 1748 3750</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="text-accent mt-1 flex-shrink-0" size={18} />
                 <a
-                  href="mailto:info@premiumhomes.com"
+                  href="mailto:halomorizono@gmail.com"
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  info@premiumhomes.com
+                  halomorizono@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -79,6 +79,7 @@ const Footer = () => {
               {[
                 { href: "https://facebook.com", icon: <Facebook size={20} /> },
                 { href: "https://www.instagram.com/gardens.ula/", icon: <Instagram size={20} /> },
+                { href: "https://www.tiktok.com", icon: <FaTiktok size={20} /> },
               ].map((social) => (
                 <a
                   key={social.href}
@@ -97,7 +98,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/70 text-sm">
-            &copy; {currentYear} PremiumHomes. {t("footer.rights")}.
+            &copy; {currentYear} Morizono - Gardens. {t("footer.rights")}.
           </p>
         </div>
       </div>

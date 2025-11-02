@@ -89,12 +89,6 @@ const Facilities = () => {
 
   return (
     <>
-      {/* ✅ SEO Metadata */}
-      {/* <Head>
-        <title>{t("facilities.title")} - PremiumHomes</title>
-        <meta name="description" content={t("facilities.subtitle")} />
-      </Head> */}
-
       <div className="min-h-screen flex flex-col">
         <Navbar />
 
